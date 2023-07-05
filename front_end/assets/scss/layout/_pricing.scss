@@ -1,0 +1,97 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  14. PRICING CSS
+/*----------------------------------------*/
+
+/* theme btn */
+
+.tp-pricing {
+    &__card {
+        padding: 60px 35px;
+        border: 4px solid #eeeeee;
+
+        &-title {
+            font-size: 30px;
+            font-family: "glacial_indifferencebold";
+            text-transform: capitalize;
+        }
+
+        & span {
+            text-transform: uppercase;
+            font-size: 13px;
+            color: #0b0b0b;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        &-price {
+            font-size: 80px;
+
+            & span {
+                position: relative;
+                top: -34px;
+                font-size: 36px;
+            }
+        }
+
+        &-active {
+            border-color: transparent;
+
+            & .tp-pricing {
+                &__card {
+                    &-title {
+                        color: var(--tp-common-white);
+                    }
+
+                    &-month {
+                        color: var(--tp-common-white);
+                    }
+
+                    &-price {
+                        color: var(--tp-common-white);
+
+                        span {
+                            color: var(--tp-common-white);
+                        }
+                    }
+                }
+
+                &__feature {
+                    & ul {
+                        li {
+                            color: var(--tp-common-white);
+                        }
+                    }
+
+                    & span {
+                        color: var(--tp-theme-primary);
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+
+    &__feature {
+        ul {
+            list-style: none;
+
+            li {
+                color: #636363;
+                font-size: 16px;
+                margin-bottom: 6px;
+
+                & span {
+                    color: #8799a3;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+}

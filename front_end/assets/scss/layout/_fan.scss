@@ -1,0 +1,43 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  10. FAN CSS
+/*----------------------------------------*/
+
+
+.tp-fan {
+    &__section{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__content {
+        & span {
+            color: var(--tp-common-white);
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        & h1 {
+            font-size: 45px;
+            color: var(--tp-common-white);
+            @media #{$xs,$sm} {
+                & br {
+                    font-size: 40px;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.Layer_497 {
+    background-image: url("Layer 497.png");
+    position: absolute;
+    left: -38px;
+    top: 2185px;
+    width: 2093px;
+    height: 1397px;
+    z-index: 204;
+  }
+  

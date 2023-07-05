@@ -1,0 +1,237 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  06. TEAM CSS
+/*----------------------------------------*/
+
+
+.tp-team{
+    &__item{
+        
+        &:hover{
+            & .tp-team{
+                &__img {
+                    &::before{
+                        height: 100%;
+                        opacity: 1;
+                    }
+                }
+                &__content{
+                    opacity: 1;
+                    bottom: 50%;
+                }
+            }
+        }
+        &-3{
+            &:hover{
+                & .tp-team{
+                    &__img-3 {
+                        & img {
+                            transform: scale(1.1);
+                        }
+                    }
+                    &__name-3{
+                        color: var(--tp-common-white);
+                    }
+                    &__content-3{
+                       background-color: var(--tp-theme-primary);
+                       & span{
+                            color: var(--tp-common-white);
+                       }
+                    }
+                    &__social-3{
+                        a{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__img {
+        position: relative;
+        & img{
+            width: 100%;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+            display: inline-block;
+            opacity: 0;
+            @include transition(.3s);
+        }
+    }
+    &__content{
+        position: absolute;
+        bottom: 30%;
+        width: 100%;
+        padding: 40px;
+        transform: translateY(50%);
+        text-align: center;
+        opacity: 0;
+        @include transition(.3s);
+        &-3{
+            background-color: #e5e5e5;
+            padding: 20px 30px;
+            @include transition(.3s);
+            @media #{$lg} {
+                padding: 20px 10px;
+            }
+            & span {
+                font-size: 15px;
+                color: #a1a1a1;
+                text-transform: uppercase;
+                @include transition(.3s);
+            }
+        }
+    }
+    &__name{
+        font-size: 35px;
+        color: var(--tp-common-white);
+        
+        & a {
+            background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+            display: inline;
+            background-size: 0% 1px, 0 1px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.4s linear;
+            &:hover{
+                background-size: 0% 1px, 100% 1px;
+            }
+        }
+        &-3 {
+            font-size: 22px;
+            font-weight: 300;
+            &:hover{
+                opacity: .9;
+            }
+        }
+    }
+    &__status{
+        color: var(--tp-theme-primary);
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    &__social{
+        color: var(--tp-common-white);
+        & a {
+            margin: 0 5px;
+            display: inline-block;
+            &:hover {
+                opacity: .7;
+            }
+        }
+        &-3{
+            & ul {
+                & li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    & a{
+                        color: #9fa4af;
+                        &:hover{
+                            opacity: .9;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.tp-team-details{
+    &__wrapper{
+        border-radius: 30px;
+    }
+    &__img {
+        border-radius: 30px;
+        & img {
+            border-radius: 30px 0 0 30px;
+        }
+    }
+    &__name{
+        font-size: 30px;
+        font-weight: 300;
+    }
+    &__positon{
+        font-size: 18px;
+        color: grey;
+    }
+    &__text{
+        padding-right: 150px;
+        margin-bottom: 40px;
+        @media #{$xs,$sm,$md} {
+            padding: 20px;
+            padding-top: 50px;
+            padding-bottom: 0;
+        }
+        & p {
+            font-size: 16px;
+        }
+    }
+    &__cta{
+        margin-bottom: 50px;
+        @media #{$xs,$md,$sm} {
+        padding: 20px;
+        }
+         & span {
+            font-size: 18px;
+            display: inline-block;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+            & br{
+                @media #{$xs,$md,$sm} {
+                    display: none;
+                }
+            }
+            &:hover{
+                & a{
+                    color:var(--tp-theme-primary);
+                }
+            }
+            & i {
+                color: var(--tp-theme-secondary);
+                position: absolute;
+                top: 5px;
+                left: 0;
+            }
+        }
+    }
+    &__social{
+        @media #{$xs,$md,$sm} {
+            margin-bottom: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        & a {
+            font-size: 16px;
+            width: 40px;
+            height: 40px;
+            background-color:var(--tp-theme-secondary);
+            display: inline-block;
+            line-height: 40px;
+            text-align: center;
+            color: var(--tp-common-white);
+            margin-right: 10px;
+            &:hover {
+                background-color: var(--tp-theme-primary);
+            }
+        }
+    }
+}
+
+.team__details-info {
+    & h4 {
+        font-size: 40px;
+    }
+    & p {
+        font-size: 16px;
+    }
+}

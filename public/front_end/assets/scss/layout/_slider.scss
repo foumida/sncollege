@@ -1,0 +1,182 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  04. SLIDER CSS
+/*----------------------------------------*/
+
+.tp-slider {
+    $self : &;
+    &__area{
+        &-8 {
+            & .swiper-slide{
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+    &__item{
+        margin-top:170px;
+        @media #{$xs} {
+            margin-bottom: 50px;
+        }
+       
+    }
+    &__height {
+        min-height: 1025px;
+
+        @media #{$md} {
+            min-height: 750px;
+        }
+
+        @media #{$sm} {
+            min-height: 650px;
+        }
+
+        @media #{$xs} {
+            min-height: 650px;
+        }
+        &-2{
+            min-height: 700px;
+        }
+    }
+
+    &__overlay {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            @include tp-afbf-full();
+            background-image: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+            background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+            background-image: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+            opacity: .8;
+            z-index: -1;
+        }
+    }
+    &__subtitle{
+        font-size: 33px;
+        text-transform: uppercase;
+        @media #{$sm} {
+            font-size: 21px;
+        }
+
+        @media #{$xs} {
+            font-size: 21px;
+        }
+    }
+    &__title {
+        font-size: 80px;
+        color: var(--tp-common-white);
+        margin-bottom: 20px;
+        line-height: 1.1;
+        @media #{$sm} {
+            font-size: 45px;
+        }
+
+        @media #{$xs} {
+            font-size: 45px;
+        }
+
+        &-pre {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--tp-common-white);
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        &-lg{
+            font-size: 128px;
+            line-height: 1;
+            @media #{$sm} {
+                font-size: 65px;
+            }
+    
+            @media #{$xs} {
+                font-size: 60px;
+            }
+            
+        }
+    }
+
+    &__content {
+        & p {
+            font-size: 18px;
+            line-height: 28px;
+            color: var(--tp-common-white);
+            font-size: 20px;
+            padding-right: 172px;
+            margin-bottom: 55px;
+
+            @media #{$xs} {
+               padding-right: 0;
+
+            }
+        }
+    }
+
+    &__pagination {
+        @media #{$sm, $xs} {
+            display: none;
+        }
+
+        & button {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+
+            &.slider-button-next {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+
+    &__dot {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        @include transform(translateX(-50%));
+        z-index: 9;
+        text-align: center;
+
+        & .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background-color: var(--tp-common-white);
+            margin: 0 8px;
+            @include transform(scale(1));
+        }
+    }
+}
+
+.slider-play-btn {
+    font-size: 14px;
+    color: var(--tp-common-dark-3);
+    text-transform: capitalize;
+    font-weight: 700;
+
+    @media #{$xs} {
+        display: block;
+    }
+
+    & .slider-play-btn-icon {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background-color: var(--tp-common-white);
+        color: var(--tp-common-dark-3);
+        border-radius: 50%;
+    }
+
+    & .slider-play-btn-text {
+        margin-left: 20px;
+    }
+
+    &:hover {
+        color: var(--tp-common-white);
+    }
+}

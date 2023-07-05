@@ -1,0 +1,113 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  SECTION TITLE CSS START
+/*----------------------------------------*/
+
+.tp-section {
+    &__subtitle {
+        font-size: 15px;
+        font-family: var(--tp-ff-heading);
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    &__title {
+        font-size: 34px;
+        color: var(--tp-common-black);
+        @media #{$xs,$sm} {
+            font-size: 26px;
+
+            & br {
+                display: none;
+            }
+        }
+
+        &-wrapper {
+
+            & p {
+                color: var(--tp-text-3);
+                margin-bottom: 45px;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+
+    }
+    &__title-sm {
+        font-weight: normal;
+        font-size: 43px;
+        line-height: 1.1;
+        @media #{$xs,$sm} {
+            font-size: 35px;
+        }
+
+        & span {
+            color: var(--tp-theme-primary);
+        }
+
+    }
+
+    &__title-lg {
+        font-size: 64px;
+        color: var(--tp-common-black);
+        font-weight: normal;
+        line-height: 1.1;
+        @media #{$xs,$sm} {
+            font-size: 35px;
+        }
+    }
+
+    &__title-md {
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 1.1;
+        @media #{$xs,$sm} {
+            font-size: 35px;
+        }
+
+        & span {
+            color: var(--tp-theme-primary);
+        }
+
+    }
+
+}
+
+.tp-hero {
+    &__title {
+        font-size: 76px;
+        color: var(--tp-common-black);
+        line-height: 1;
+        margin-bottom: 25px;
+        & span {
+            background-image: linear-gradient(100deg, #3b75fb, #26cdff);
+            color: var(--tp-grey-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @media #{$md,$lg} {
+            & br {
+                display: none;
+            } 
+        }
+        @media #{$xs,$sm} {
+            font-size: 35px;
+
+            & br {
+                display: none;
+            }
+        }
+
+        &-section {
+            & p {
+                color: var(--tp-text-3);
+                margin-bottom: 50px;
+                font-size: 24px;
+                line-height: 1.4;
+            }
+        }
+
+    }
+}

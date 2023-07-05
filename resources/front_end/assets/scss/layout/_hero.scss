@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  HERPSECTION CSS START
+/*----------------------------------------*/
+
+.tp-hero {
+    &__left-3 {
+        @media #{$xs,$sm,$md} {
+            padding-top:200px;
+        }
+    }
+
+    &__section {
+        padding-top: 380px;
+        padding-bottom: 280px;
+        background-size: cover;
+
+        @media #{$xs,$sm,$md} {
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
+        &-6{
+            &-shape{
+                position: absolute;
+                right: 0;
+                z-index: -1;
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__thum-3 {
+        & img {
+            @media #{$xs,$sm,$md} {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.tp-container-space-6{
+    padding-left: 230px;
+    padding-right: 280px;
+    @media #{$xl} {
+        padding-left: 100px;
+    }
+    @media #{$lg} {
+        padding-left: 100px;
+    }
+    @media #{$xs,$sm,$md} {
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+}

@@ -1,0 +1,236 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  12. CATEGORY CSS
+/*----------------------------------------*/
+
+.tp-cat {
+    &__space {
+        padding-left: 70px;
+        padding-right: 70px;
+
+        @media #{$xs,$sm,$md,} {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+    }
+
+    &__card {
+        position: relative;
+
+        &:hover {
+            & .tp-cat__thum {
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+
+        &-9 {
+            position: relative;
+            &:hover {
+                & .tp-cat__thum-9 {
+                    & img {
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__thum {
+        overflow: hidden;
+
+        & img {
+            @include transition(.3s);
+        }
+        &-9{
+            overflow: hidden;
+            & img {
+                @include transition(.3s);
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 100px;
+
+        @media #{$xxl} {
+            padding: 0 50px;
+        }
+
+        @media #{$xl} {
+            padding: 0 50px;
+        }
+
+        @media #{$lg} {
+            padding: 0 50px;
+        }
+
+        @media #{$md} {
+            padding: 0 40px;
+        }
+
+        @media #{$xs,$sm} {
+            padding: 0 20px;
+        }
+
+        &.tp-right {
+            right: 0;
+            text-align: end;
+        }
+        &-9{
+        position: absolute;
+        bottom: 100px;
+        padding: 0 100px;
+            @media #{$xxl} {
+                padding: 0 50px;
+            }
+
+            @media #{$xl} {
+                padding: 0 50px;
+            }
+
+            @media #{$lg} {
+                padding: 0 50px;
+            }
+
+            @media #{$md} {
+                padding: 0 40px;
+            }
+
+            @media #{$xs,$sm} {
+                padding: 0 20px;
+                bottom: 20px;
+            }
+            & span {
+                background-color: var(--tp-common-black);
+                color: var(--tp-common-white);
+                padding: 5px 10px;
+                border-radius: 5px;
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: var(--tp-common-black);
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+    &__info-9{
+        & p {
+            color: var(--tp-theme-secondary);
+            font-size: 28px;
+            margin-bottom: 0;
+            @media #{$xs,$sm} {
+                font-size: 18px;
+            }
+        }
+        span {
+            background-color: transparent;
+            color: #252525;
+            font-weight: 700;
+            & a {
+                background-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+                display: inline;
+                background-size: 0% 21px, 0 2px;
+                background-position: 100% 100%, 0 100%;
+                background-repeat: no-repeat;
+                transition: background-size 0.4s linear;
+                &:hover{
+                    background-size: 0% 2px, 100% 2px;
+                }
+            }
+        }
+
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        color: var(--tp-text-11);
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 10px;
+       
+        @media #{$xs} {
+            font-size: 12px;
+        }
+    }
+
+    &__title {
+        font-size: 50px;
+        color: var(--tp-common-black-9);
+
+        @media #{$xs,$sm} {
+            font-size: 24px;
+
+            & br {
+                display: none;
+            }
+        }
+        & a {
+            background-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+            display: inline;
+            background-size: 0% 1px, 0 1px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.4s linear;
+
+            &:hover {
+                background-size: 0% 1px, 100% 1px;
+            }
+        }
+        &-9{
+            font-size: 40px;
+            color: var(--tp-common-black-9);
+    
+            @media #{$xs,$sm} {
+                font-size: 24px;
+                & br {
+                    display: none;
+                }
+            }
+            & a {
+                background-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+                display: inline;
+                background-size: 0% 1px, 0 1px;
+                background-position: 100% 100%, 0 100%;
+                background-repeat: no-repeat;
+                transition: background-size 0.4s linear;
+    
+                &:hover {
+                    background-size: 0% 1px, 100% 1px;
+                }
+            }
+            &-lg{
+                font-size: 120px;
+                color: #2f3240;
+                    &:hover {
+                        color: var(--tp-theme-primary);
+                    }
+                @media #{$lg} {
+                    font-size: 90px;
+                }
+                @media #{$md} {
+                    font-size: 80px;
+                }
+                @media #{$xs,$sm,} {
+                    font-size: 50px;
+                }
+                
+            }
+        }
+
+        
+    }
+    
+}

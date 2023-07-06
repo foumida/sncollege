@@ -45,8 +45,7 @@
 	 
 
 	 
-<!-- Vite layout styles 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])-->
+
   </head>
   <body>
     <div class="container-scroller">

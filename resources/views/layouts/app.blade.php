@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>MES ASMABI</title>
+    <title>SN COLLEGE</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="{{asset('theme/admin/assets/css/style.css')}}">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{asset('theme/admin/assets/images/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('theme/admin/assets/images/logo.png')}}">
     <!-- Scripts 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])-->
 </head>

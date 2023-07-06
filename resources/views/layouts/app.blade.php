@@ -20,7 +20,7 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{asset('theme/admin/assets/images/logo.png')}}">
     <!-- Scripts 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])-->
+   -->
 </head>
 <body>
     <div id="app">

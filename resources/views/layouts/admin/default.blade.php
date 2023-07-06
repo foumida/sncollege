@@ -114,22 +114,22 @@
               <span class="menu-title">Cell</span>
             </a>
           </li>
-		  <li class="nav-item menu-items">
+		 <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ url('/admin/addCertificate') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-contacts"></i>
               </span>
               <span class="menu-title">Conduct Certificate</span>
             </a>
-          </li>
-           <li class="nav-item menu-items">
+          </li>-->
+         <!--  <li class="nav-item menu-items">
             <a class="nav-link" href="{{ url('/admin/addTc') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-contacts"></i>
               </span>
               <span class="menu-title">Download Tc</span>
             </a>
-          </li>
+          </li>-->
 		    <li class="nav-item menu-items">
             <a class="nav-link" href="{{ url('/admin/tcList') }}">
               <span class="menu-icon">
@@ -146,14 +146,14 @@
               <span class="menu-title">Add Scholoarship</span>
             </a>
           </li>
-		   <li class="nav-item menu-items">
+		  <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ url('/admin/addNaacKeyword') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-checkbox-blank"></i>
               </span>
               <span class="menu-title">Add Scholoarship Title</span>
             </a>
-          </li>
+          </li>-->
 		   <li class="nav-item menu-items">
             <a class="nav-link" href="{{ url('/admin/nonfacultyList') }}">
               <span class="menu-icon">

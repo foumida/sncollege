@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>MES ASMABI Faculty</title>
+    <title>SN College</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('public/theme/admin/assets/vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('theme/admin/assets/vendors/css/vendor.bundle.base.css')}}">
@@ -76,14 +76,14 @@
           </li>
 		   @if((Auth::User()->role == 3) && (Auth::User()->type != 'sub'))
 			  <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basica" aria-expanded="false" aria-controls="ui-basica">
+            <a class="nav-link" data-toggle="collapse" href="#ui-NonTeaching" aria-expanded="false" aria-controls="ui-NonTeaching">
               <span class="menu-icon">
                 <i class="mdi mdi-gamepad-circle-up"></i>
               </span>
               <span class="menu-title">Non Teaching Faculty</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basica">
+            <div class="collapse" id="ui-NonTeaching">
                
                   <ul class="nav flex-column sub-menu">
                    <li class="nav-item"> <a class="nav-link" href="{{url('/office/loginStaff')}}">Add Non Faculty </a></li>
@@ -111,14 +111,14 @@
           </li>
 		  @endif
           <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
+            <a class="nav-link" data-toggle="collapse" href="#ui-Teaching" aria-expanded="false" aria-controls="ui-Teaching">
               <span class="menu-icon">
                 <i class="mdi mdi-gamepad-circle-up"></i>
               </span>
               <span class="menu-title">Teaching Faculty</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basic1">
+            <div class="collapse" id="ui-Teaching">
                   @if((Auth::User()->role == 3) && (Auth::User()->type == 'sub'))
                   <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="{{ url('/office/facultyList') }}">Faculty List</a></li>
@@ -228,7 +228,7 @@
             </div>
           </li>
 		       <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basicgen" aria-expanded="false" aria-controls="ui-basicr">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basicgen" aria-expanded="false" aria-controls="ui-basicgen">
               <span class="menu-icon">
                 <i class="mdi mdi-checkbox-blank-outline"></i>
               </span>
@@ -480,5 +480,5 @@
         selector: '.mytextarea'
       });
 </script>	
-  </body>
+  </body>
 </html>

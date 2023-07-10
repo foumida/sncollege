@@ -40,8 +40,7 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{asset('theme/admin/assets/images/favicon.png')}}" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
-<!-- Vite layout styles 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])-->
+
 
   </head>
   <body>

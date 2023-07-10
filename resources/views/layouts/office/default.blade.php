@@ -290,7 +290,7 @@
               <span class="menu-title">Phd Progress List</span>
             </a>@endif
           </li>
-           <li class="nav-item menu-items">
+         <!--  <li class="nav-item menu-items">
               @if((Auth::User()->role == 3))
             <a class="nav-link" href="{{ url('/office/fdpList') }}">
               <span class="menu-icon">
@@ -298,7 +298,7 @@
               </span>
               <span class="menu-title">FAPI List</span>
             </a>@endif
-          </li>
+          </li>-->
 		   @if((Auth::User()->role == 3))
            <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">

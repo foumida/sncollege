@@ -245,7 +245,7 @@
               </ul>@endif
             </div>
           </li>
-          <li class="nav-item menu-items">
+       <!--   <li class="nav-item menu-items">
               @if((Auth::User()->role == 3))
             <a class="nav-link" href="{{ url('/office/eventList') }}">
               <span class="menu-icon">
@@ -253,7 +253,7 @@
               </span>
               <span class="menu-title">Event List</span>
             </a>@endif
-          </li>
+          </li>-->
 		   <li class="nav-item menu-items">
               @if((Auth::User()->role == 3))
             <a class="nav-link" href="{{ url('/office/studentList') }}">

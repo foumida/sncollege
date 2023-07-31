@@ -648,7 +648,7 @@ LEFT join cell on cell.id=cell_events.fid order by cell_events.id desc");
     }
   	    public function saveFaculty(Request $request)
     {
-       
+        $current_date_time = Carbon::now()->toDateTimeString();
         if($request->file('file1')) 
 		{ 
         
@@ -760,7 +760,7 @@ if (!empty($users)) {
 	 'username'=> $request->email,
 	 'password'=> 'faculty@123',
    );
-	$current_date_time = Carbon::now()->toDateTimeString();
+	
         	$id  =   DB::table('faculity')->insertGetId($dataArray);
 
 		          $password='faculty@123';

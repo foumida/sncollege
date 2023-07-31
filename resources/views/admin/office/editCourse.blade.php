@@ -145,7 +145,7 @@ label {
 							<div class="col-md-12">
 								<div class="row">
 										<div class="col-md-4 form-group">
-									  <label>Add Syllabus</label> <a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/course/'.$profile_edit[0]->syllabus)}}" download="">Download</a>
+									  <label>Add Syllabus</label> <a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/course/'.$profile_edit[0]->syllabus)}}" download="">Download</a>
 									  <input type="file" class="form-control" id="file1" name="file1"  />
 									  <small> (Only PDF/Word Files Accepted)</small>
 									  <input type="hidden" name="current_file" value="{{$profile_edit[0]->syllabus}}">

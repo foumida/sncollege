@@ -166,7 +166,7 @@ label {
                             <td>{{$val->p_credit}}  </td>
 						     <td>{{$val->p_hourse}}  </td>
 						     <td>{{$val->p_type}} {{$val->theory_subdivision}} </td>
-						     <td>{{$val->p_syllabus}}  <a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/course/'.$val->p_syllabus)}}" download="">Download</a> </td>
+						     <td>{{$val->p_syllabus}}  <a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/course/'.$val->p_syllabus)}}" download="">Download</a> </td>
 						     <td>{{$val->p_semester}} </td>
 						     						    
  @if(Auth::User()->role == 1)  

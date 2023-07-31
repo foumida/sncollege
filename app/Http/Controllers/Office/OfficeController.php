@@ -648,7 +648,7 @@ LEFT join cell on cell.id=cell_events.fid order by cell_events.id desc");
     }
   	    public function saveFaculty(Request $request)
     {
-        $current_date_time = Carbon::now()->toDateTimeString();
+        $current_date_time = Carbon::now()->toDateTimeString();  
         if($request->file('file1')) 
 		{ 
         
@@ -709,31 +709,11 @@ LEFT join cell on cell.id=cell_events.fid order by cell_events.id desc");
         }
         
         $users=$request->Position;
-        $positiondata = '';
-        
-// Check if the $users array is not empty
-if (!empty($users)) {
-    // If the array contains the value 'hod', store it in the $hodPosition variable
-    if (in_array('HOD', $users)) {
-        $hodPosition = 'HOD';
-        
-    $hodvalues = array(
-        'name' => $request->name,
-        'email' => $request->department . '@sn.org',
-        'role' => 6,
-        'password' => Hash::make('hod@123'), // Set the password directly to 'hod@123' for HOD
-        'created_at' => $current_date_time,
-        'updated_at' => $current_date_time,
-        'profile_id' => $id,
-        'type' =>'HOD'
-    );
-
-    $result = DB::table('users')->insert($hodvalues);
-    } else {
-        // If 'hod' is not present in the array, implode all positions into a comma-separated string
-        $positiondata = implode(', ', $users);
-    }
-} else {
+        if($users!='')
+        {
+        $positiondata =  implode(', ',$users);
+        } else
+        {
            $positiondata=''; 
         }
 		 $dataArray      =  array(
@@ -763,6 +743,26 @@ if (!empty($users)) {
 	
         	$id  =   DB::table('faculity')->insertGetId($dataArray);
 
+           
+                // If the array contains the value 'hod', store it in the $hodPosition variable
+                if (in_array('HOD', $users)) {
+                    $hodPosition = 'HOD';
+                    
+                $hodvalues = array(
+                    'name' => $request->name,
+                    'email' => $request->department . '@sn.org',
+                    'role' => 6,
+                    'password' => Hash::make('hod@123'), // Set the password directly to 'hod@123' for HOD
+                    'created_at' => $current_date_time,
+                    'updated_at' => $current_date_time,
+                    'profile_id' => $id,
+                    'type' =>'HOD'
+                );
+            
+                DB::table('users')->insert($hodvalues);
+                } 
+        
+
 		          $password='faculty@123';
 				  $loginvalues= array('name' => $request->name,
 				                'email' => $request->email,
@@ -772,10 +772,10 @@ if (!empty($users)) {
 								 'updated_at' => $current_date_time,
 								 'profile_id'=> $id
 								 );
-			$result=DB::table('users')->insert($loginvalues);
+			DB::table('users')->insert($loginvalues);
 	
 	
-	if($result==1){ 
+	if($id){ 
                     	return response()->json(['success'=>'Faculty Details has been uploaded']);
                 } 
                 else{

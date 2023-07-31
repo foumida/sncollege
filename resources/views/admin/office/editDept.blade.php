@@ -96,7 +96,7 @@ label {
 								 <label>Banner</label>
 							    <input type="file" class="form-control" id="image" name="image"  />
                           <input type="hidden" name="current_file_img" value="{{$profile_edit[0]->picture}}">
-									   <span class="pl-2"><img height="100" width="100" src="{{url('public/uploads/department/'.$profile_edit[0]->picture)}}"  /></span>
+									   <span class="pl-2"><img height="100" width="100" src="{{url('uploads/department/'.$profile_edit[0]->picture)}}"  /></span>
 									</div>
 									
 								</div>

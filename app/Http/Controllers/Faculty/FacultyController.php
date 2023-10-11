@@ -3492,45 +3492,34 @@ $coldept= implode(",",$locations);
 		 return response('There is some issue', 200); 
 	}
     }
-	public function storeMultiFile(Request $request)
+    public function storeMultiFile(Request $request)
     {
-          $facultyid = $request->editid;
-       $validatedData = $request->validate([
-        //'files' => 'required',
-        'files.*' => 'mimes:jpeg,png,jpg,gif|max:2048'
+        $facultyid = $request->editid;
+         
+        $validatedData = $request->validate([
+            'files.*' => 'mimes:jpeg,png,jpg,gif|max:2048'
         ]);
- 
-        if($request->TotalFiles > 0)
-        {
-                
-           for ($x = 0; $x < $request->TotalFiles; $x++) 
-           {
- 
-               if ($request->hasFile('files'.$x)) 
-                {
-                    $file      = $request->file('files'.$x);
-                   $filename  = $file->getClientOriginalName();
-            $extension = $file->getClientOriginalExtension();
-            $picture   = time().'-'.date('His').'-'.$filename;
-			 $file->move(public_path('uploads/faculty'), $picture);
-            $postArray = ['picture' => $picture,'type'=>'faculty','fid' => $facultyid];
-            DB::table('picture')->insert($postArray);
-              
+     
+        if ($request->TotalFiles > 0) {
+            for ($x = 0; $x < $request->TotalFiles; $x++) {
+                if ($request->hasFile('files' . $x)) {
+                    $file = $request->file('files' . $x);
+                    $filename = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension(); // Get the file extension
+                    $picture = time() . '-' . date('His') . '-' . $filename; // Append the extension
+                    $file->move(public_path('uploads/faculty'), $picture);
+                    
+                    $postArray = ['picture' => $picture, 'type' => 'faculty', 'fid' => $facultyid];
+                    DB::table('picture')->insert($postArray);
                 }
-				 
-           }
- 
-          
- 
-            return response()->json(['success'=>'Ajax Multiple fIle has been uploaded']);
- 
-          
+            }
+     
+            return response()->json(['success' => 'Ajax Multiple File has been uploaded']);
+        } else {
+            return response()->json(["message" => "Please try again."]);
         }
-        else
-        {
-           return response()->json(["message" => "Please try again."]);
-        }
-	}
+    }
+    
 	
 	   public function deleteEvent(Request $request)
     {

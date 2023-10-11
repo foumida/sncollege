@@ -39,20 +39,19 @@
             <br />
                <form method="POST" action="{{ url('faculty/eventdateList') }}"> 
                @csrf
-            <div class="row input-daterange">
-                <div class="col-md-4">
-                    <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" readonly />
-                </div>
-                <div class="col-md-4">
-                    <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" readonly />
-                </div>
-                <div class="col-md-4">
-                    <button type="submit" name="filter" id="filter" class="btn btn-primary">Refine</button>
-                    <button type="button" name="refresh" id="refresh" class="btn btn-success">Refresh</button>
-                     
-                    
-                </div>
-            </div>
+               <div class="row input-daterange">
+    <div class="col-md-4">
+        <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" readonly />
+    </div>
+    <div class="col-md-4">
+        <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" readonly />
+    </div>
+    <div class="col-md-4">
+        <button type="submit" name="filter" id="filter" class="btn btn-primary">Refine</button>
+        <button type="button" name="refresh" id="refresh" class="btn btn-success">Refresh</button>
+    </div>
+</div>
+
             </form>
             
             <br />
@@ -92,6 +91,9 @@
                            <td>{{$val->dept}}  </td>
                            <td>{{$val->cell}}  </td>
                            <td>{{$val->facultyname}}  </td>
+                           @php
+$download = '';
+@endphp
 						     @if(Auth::User()->role == 2)  
  @php 
    $editEvent=url('faculty/editEvent/'.$val->id.'/'.$val->eventtype);
@@ -143,13 +145,20 @@
                       </table>
                     </div>
 					@endif
-					<div><a class="btn btn-info" href="{{$download}}" id="export" onclick="exportStudent(event.target);"><i class="fa fa-download"></i> Download Excel</a></div>
+          @if(!empty($list))
+          @if(Auth::User()->role == 2)
+    <div><a class="btn btn-info" href="{{$download}}" id="export" onclick="exportStudent(event.target);"><i class="fa fa-download"></i> Download Excel</a></div>
+@elseif(Auth::User()->role == 6)
+    <div><a class="btn btn-info" href="{{$download}}" id="export" onclick="exportStudent(event.target);"><i class="fa fa-download"></i> Download Excel</a></div>
+@elseif(Auth::User()->role == 3)
+    <div><a class="btn btn-info" href="{{$download}}" id="export" onclick="exportStudent(event.target);"><i class="fa fa-download"></i> Download Excel</a></div>
+@endif  @endif
                   </div>
                   
                 </div>
             
 	
-
+                <script src="path/to/bootstrap-datepicker.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 function deleteEvent(id)
@@ -173,11 +182,11 @@ if (confirm("Are you sure you want to delete?") == true) {
 </script>
 <script>
 $(document).ready(function(){
- $('.input-daterange').datepicker({
-  todayBtn:'linked',
-  format:'yyyy-mm-dd',
-  autoclose:true
- });
+  $('.input-daterange input').datepicker({
+        todayBtn: 'linked',
+        format: 'yyyy-mm-dd',
+        autoclose: true
+    });
 
  $('#refresh').click(function(){
   $('#from_date').val('');

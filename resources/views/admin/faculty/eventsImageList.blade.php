@@ -69,8 +69,8 @@
                           <tr>
                            <td>{{$i}}</td>
                             <td>
-                             <a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/faculty/'.$val->picture)}}" download="">Download</a>
-                              <span class="pl-2"><img height="100" width="100" src="{{url('public/uploads/faculty/'.$val->picture)}}"  /></span>
+                             <a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/faculty/'.$val->picture)}}" download="">Download</a>
+                              <span class="pl-2"><img height="100" width="100" src="{{url('uploads/faculty/'.$val->picture)}}"  /></span>
                             </td>
                           
          @if(Auth::User()->role == 2)  

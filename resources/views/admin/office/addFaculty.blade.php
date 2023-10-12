@@ -40,7 +40,8 @@ label {
                    <form id="fupForm" enctype="multipart/form-data">
                         @csrf  
                       <div class="form-group">
-                        <label for="exampleInputName1">Full Name</label>
+                        <label for="exampleInputName1">Full Name <span style="font-size: 1.2em;">*</span>
+</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                       </div>
 					
@@ -49,15 +50,15 @@ label {
 							<div class="col-md-12">
 								<div class="row">
 									<div class="col-md-4 form-group">
-									  <label>Date of Birth</label>
+									  <label>Date of Birth <span style="font-size: 1.2em;">*</span></label>
 									 <input type="date" class="form-control form-control-lg" id="dateofbirth" name="dateofbirth" aria-label="Username">
 									</div>
 									<div class="col-md-4 form-group">
-									  <label>Date of Joining </label>
+									  <label>Date of Joining <span style="font-size: 1.2em;">*</span></label>
 									  <input type="date" class="form-control form-control-lg" id="dateofjoining" name="dateofjoining" aria-label="Username">
 									</div>
 									<div class="col-md-4 form-group">
-									  <label>Gender</label>
+									  <label>Gender <span style="font-size: 1.2em;">*</span></label>
 								 <select class="form-control" name="gender" id="gender" >
             										<option value="">Select Gender</option>
             										<option value="Male">Male</option>
@@ -73,15 +74,15 @@ label {
 							<div class="col-md-12">
 								<div class="row">
 									<div class="col-md-4 form-group">
-									  <label>Guardian Name</label>
+									  <label>Guardian Name <span style="font-size: 1.2em;">*</span></label>
 									 <input type="text" class="form-control form-control-lg" id="guardianName" name="guardianName" aria-label="Username">
 									</div>
 									<div class="col-md-4 form-group">
-									  <label>Phone Number </label>
+									  <label>Phone Number <span style="font-size: 1.2em;">*</span></label>
 									  <input type="text" class="form-control form-control-lg" id="phonenum" name="phonenum" aria-label="Username">
 									</div>
 										<div class="col-md-4 form-group">
-									  <label>Email</label>
+									  <label>Email <span style="font-size: 1.2em;">*</span></label>
 									   <input type="email" class="form-control form-control-lg" id="email" name="email" aria-label="Username" type="email" placeholder="mail@example.com" onblur="checkmain(this.value)">
 									</div>
 								</div>
@@ -95,7 +96,7 @@ label {
 							<div class="col-md-12">
 								<div class="row">
 									<div class="col-md-4 form-group">
-									  <label>Department</label>
+									  <label>Department <span style="font-size: 1.2em;">*</span></label>
 								  <select class="form-control" name="department" id="department" >
             										<option value="">Select Dept</option>
             									    @foreach($departments as $row)
@@ -104,7 +105,7 @@ label {
             									</select>
 									</div>
 									<div class="col-md-4 form-group">
-									  <label>Designation</label>
+									  <label>Designation <span style="font-size: 1.2em;">*</span></label>
 									  <select class="form-control" name="designation" id="designation" >
 										<option value="">Select Designation</option>
 										<option value="Professor">Professor</option>
@@ -116,7 +117,7 @@ label {
 											</select>
 									</div>
 										<div class="col-md-4 form-group">
-									  <label>Position</label>
+									  <label>Position <span style="font-size: 1.2em;">*</span></label>
 									  <select class="form-control" name="Position[]" id="lstSelect" multiple>
 									
 										<option value="Principal">Principal</option>
@@ -134,7 +135,7 @@ label {
 										<option value="PTASecretary">PTA Secretary</option>
 										<option value="Superintendent">Superintendent</option>
 										<option value="HeadAccountant(HA)">Head Accountant (HA)</option>
-										<option value="None">None</option>
+										<option value="">None</option>
 											</select>
 									</div>
 									

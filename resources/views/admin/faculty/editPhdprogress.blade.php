@@ -82,7 +82,7 @@ label {
     								    <div class="col-lg-3">
         									<div class="form-line ">
         										<label>    Upload Certificate </label>
-        										   <a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/journal/'.$profile_edit[0]->upload_certificate)}}" download="">Download</a>
+        										   <a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/journal/'.$profile_edit[0]->upload_certificate)}}" download="">Download</a>
         									    <input type="file" class="form-control" id="file1" name="file1"  />      
         									     <span class="text-danger" id="file-input-error"></span>
 						 <input type="hidden" name="current_file" value="{{$profile_edit[0]->upload_certificate}}">
@@ -125,7 +125,7 @@ label {
     								    <div class="col-lg-4">
         									<div class="form-line ">
         										<label>    Upload Progress </label>
-        									  <a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/journal/'.$profile_edit[0]->upload_progress)}}" download="">Download</a>
+        									  <a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/journal/'.$profile_edit[0]->upload_progress)}}" download="">Download</a>
         									   <input type="file" class="form-control" id="file2" name="file2"  />   
         									     <span class="text-danger" id="file-input-error"></span>
 						 <input type="hidden" name="current_file2" value="{{$profile_edit[0]->upload_progress}}">
@@ -162,7 +162,7 @@ label {
     								    <div class="col-lg-3">
         									<div class="form-line ">
         										<label>Upload Document</label>
-        										<a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/journal/'.$profile_edit[0]->upload_document)}}" download="">Download</a>
+        										<a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/journal/'.$profile_edit[0]->upload_document)}}" download="">Download</a>
         									   <input type="file" class="form-control" id="file3" name="file3"  />   
         									     <span class="text-danger" id="file-input-error"></span>
 						 <input type="hidden" name="current_file3" value="{{$profile_edit[0]->upload_document}}">
@@ -241,7 +241,7 @@ label {
 									</div>
 										<div class="col-md-4 form-group">
 									      	<label>Upload Activity Certificate</label>
-							      	<a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/journal/'.$profile_edit[0]->upload_activity)}}" download="">Download</a>
+							      	<a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/journal/'.$profile_edit[0]->upload_activity)}}" download="">Download</a>
         									   <input type="file" class="form-control" id="file4" name="file4"  />   
         									     <span class="text-danger" id="file-input-error"></span>
 						 <input type="hidden" name="current_file4" value="{{$profile_edit[0]->upload_activity}}">

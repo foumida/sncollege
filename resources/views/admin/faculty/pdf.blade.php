@@ -143,7 +143,7 @@
                             <tr style="text-align:left !important;">
                               <td >
                                 @foreach($imagelist as $val)
-                                	<img height="100" width="100" src='{{url("public/uploads/faculty/".$val->picture)}}'  />
+                                	<img height="100" width="100" src='{{url("uploads/faculty/".$val->picture)}}'  />
                                    @endforeach 
                                    
                                   </td>

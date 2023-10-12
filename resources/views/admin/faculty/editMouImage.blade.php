@@ -50,7 +50,7 @@
                           <tr>
                           	@if(!empty($val->upload_document))	 
                             <td>
-                                <iframe src="{{url('public/uploads/journal/'.$val->upload_document)}}" width="50%" height="600">
+                                <iframe src="{{url('uploads/journal/'.$val->upload_document)}}" width="50%" height="600">
            
     </iframe>
                 @endif            

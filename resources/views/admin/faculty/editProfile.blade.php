@@ -57,7 +57,7 @@
                           <textarea class="form-control" id="description" name="description" rows="2" cols="100" >{{$profile_edit[0]->description}}</textarea>
                     </div>
 					<div class="form-group mb-5">
-                         <label for="exampleInputName1" style="float:left;">Resume</label><a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/facultyresume/'.$profile_edit[0]->resume)}}" download="">Download</a>
+                         <label for="exampleInputName1" style="float:left;">Resume</label><a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/facultyresume/'.$profile_edit[0]->resume)}}" download="">Download</a>
                          <input type="file" class="form-control"  name="file" id="inputFile" placeholder="File">
 						 <span class="text-danger" id="file-input-error"></span>
 						 <input type="hidden" name="current_file" value="{{$profile_edit[0]->resume}}">

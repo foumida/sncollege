@@ -486,7 +486,7 @@ label {
                 <div id=uploadFormNew style="display:none">
 				  <div class="form-group" >
                         <label class="col-sm-12 col-form-label" for="exampleInputName1">File Upload</label>
-                         <a href="{{url('public/uploads/facultyfile/'.$event_edit[0]->uploadfile)}}" class="btn btn-success" style="float:right;" download="">Download</a>
+                         <a href="{{url('uploads/facultyfile/'.$event_edit[0]->uploadfile)}}" class="btn btn-success" style="float:right;" download="">Download</a>
                          
                          <input type="file" class="form-control"  name="file" 
                         id="inputFile" placeholder="File">

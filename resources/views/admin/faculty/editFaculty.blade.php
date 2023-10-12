@@ -256,7 +256,7 @@ label {
                          
 						 <div class="form-group">
 						    
-                             <label for="exampleInputName1" style="float:left;">Resume</label><a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/facultyresume/'.$profile_edit[0]->resume)}}" download="">Download</a>
+                             <label for="exampleInputName1" style="float:left;">Resume</label><a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/facultyresume/'.$profile_edit[0]->resume)}}" download="">Download</a>
                          <input type="file" class="form-control"  name="file1" id="file1" placeholder="File">
 						 <span class="text-danger" id="file-input-error"></span>
 						 <input type="hidden" name="current_file" value="{{$profile_edit[0]->resume}}">
@@ -271,7 +271,7 @@ label {
                          </div>
 						 <div class="form-group">
 						    
-                             <label for="exampleInputName1" style="float:left;">Appointment Order</label>  @if(!empty($profile_edit[0]->appointment_order)) <iframe src="{{url('public/uploads/facultyresume/'.$profile_edit[0]->appointment_order)}}" width="50%" height="300">
+                             <label for="exampleInputName1" style="float:left;">Appointment Order</label>  @if(!empty($profile_edit[0]->appointment_order)) <iframe src="{{url('uploads/facultyresume/'.$profile_edit[0]->appointment_order)}}" width="50%" height="300">
            
     </iframe> @endif
                          <input type="file" class="form-control"  name="file2" id="file2" placeholder="File">
@@ -280,7 +280,7 @@ label {
                          </div>
 						  <div class="form-group">
 						    
-                             <label for="exampleInputName1" style="float:left;">Joining Memo</label>  @if(!empty($profile_edit[0]->joining_memo)) <iframe src="{{url('public/uploads/facultyresume/'.$profile_edit[0]->joining_memo)}}" width="50%" height="300">
+                             <label for="exampleInputName1" style="float:left;">Joining Memo</label>  @if(!empty($profile_edit[0]->joining_memo)) <iframe src="{{url('uploads/facultyresume/'.$profile_edit[0]->joining_memo)}}" width="50%" height="300">
            
     </iframe> @endif
                          <input type="file" class="form-control"  name="file3" id="file3" placeholder="File">
@@ -289,7 +289,7 @@ label {
                          </div>
 						 <div class="form-group">
 						    
-                             <label for="exampleInputName1" style="float:left;">Promotion Details</label>  @if(!empty($profile_edit[0]->promotion_details)) <iframe src="{{url('public/uploads/facultyresume/'.$profile_edit[0]->promotion_details)}}" width="50%" height="300">
+                             <label for="exampleInputName1" style="float:left;">Promotion Details</label>  @if(!empty($profile_edit[0]->promotion_details)) <iframe src="{{url('uploads/facultyresume/'.$profile_edit[0]->promotion_details)}}" width="50%" height="300">
            
     </iframe> @endif
                          <input type="file" class="form-control"  name="file4" id="file4" placeholder="File">

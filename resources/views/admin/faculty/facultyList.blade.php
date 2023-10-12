@@ -45,8 +45,8 @@
                             
                             <td>{{date('d-m-Y', strtotime($val->date_of_join))}}</td>
                               <td>{{$val->email_id}}  </td>
-						@if(!empty($val->picture))	<td><img src="{{url('public/uploads/facultyimg/'.$val->picture)}}" class="rounded-circle" alt="" style="width:100px;height:100px;"/> </td>@else
-            <td><img src="{{url('public/uploads/facultyimg/download.jpeg')}}" class="rounded-circle" alt="" style="width:100px;height:100px;"/></td>
+						@if(!empty($val->picture))	<td><img src="{{url('uploads/facultyimg/'.$val->picture)}}" class="rounded-circle" alt="" style="width:100px;height:100px;"/> </td>@else
+            <td><img src="{{url('uploads/facultyimg/download.jpeg')}}" class="rounded-circle" alt="" style="width:100px;height:100px;"/></td>
         @endif
         
         						    

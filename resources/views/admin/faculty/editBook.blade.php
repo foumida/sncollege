@@ -117,7 +117,7 @@ label {
 										<div class="col-md-4 form-group">
 								
 						            	<label>Upload Proof</label>
-							      <a style="float:right;" class="btn btn-info mb-2" href="{{url('public/uploads/journal/'.$profile_edit[0]->document)}}" download="">Download</a>
+							      <a style="float:right;" class="btn btn-info mb-2" href="{{url('uploads/journal/'.$profile_edit[0]->document)}}" download="">Download</a>
 							    <input type="file" class="form-control" id="file1" name="file1"  />
 							    <span class="text-danger" id="file-input-error"></span>
 						 <input type="hidden" name="current_file" value="{{$profile_edit[0]->document}}">

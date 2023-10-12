@@ -22,7 +22,7 @@
                         <div class="preview-item p-0">
 						@if(!empty($list[0]->picture))
                           <div class="preview-thumbnail">
-                            <img src="{{url('public/uploads/facultyimg/'.$list[0]->picture)}}" class="rounded-circle" alt="" style="width:136px;height:136px;">
+                            <img src="{{url('uploads/facultyimg/'.$list[0]->picture)}}" class="rounded-circle" alt="" style="width:136px;height:136px;">
                           </div>
 						
 						  @else

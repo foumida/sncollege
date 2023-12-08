@@ -298,7 +298,7 @@ var positiondata = position.toString();
       
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-			url:"{{ url('/office/saveFaculty')}}",
+			url:"{{$savefaculty}}",
             type: 'POST',
             data: new FormData(this),
             dataType: 'json',
@@ -313,7 +313,7 @@ var positiondata = position.toString();
                 if (response) {
                    // this.reset();
                     alert('Files has been uploaded successfully');
-					window.location.href = "{{ url('/office/facultyList')}}";
+					window.location.href = "{{$facultylist}}";
                 }
             },
         });

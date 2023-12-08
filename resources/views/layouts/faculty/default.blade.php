@@ -203,23 +203,23 @@
               
             </div>
           </li>
-        <li class="nav-item menu-items">
+      <!--  <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('/faculty/courseListHod')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
               <span class="menu-title">Marks Enter / Add Scholoarship</span>
             </a>
-          </li>
+          </li>-->
 		  
-		   <li class="nav-item menu-items">
+		  <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ url('/faculty/addNaacKeyword') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-checkbox-blank"></i>
               </span>
               <span class="menu-title">Add Scholoarship Title</span>
             </a>
-          </li>
+          </li>-->
         </ul>
       </nav>
       <!-- partial -->
